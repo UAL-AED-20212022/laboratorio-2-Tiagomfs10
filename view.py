@@ -23,7 +23,7 @@ def sistema_paises():
 
             
         if input_user[0] == "RPII":
-            if controller.registar_pais_indice(lista_ligada, input_user[1], input_user[2]):
+            if controller.registar_pais_indice(lista_ligada, input_user[2], input_user[1]):
                 lista_ligada.traverse_list()
 
         if input_user[0] == "VNE":
