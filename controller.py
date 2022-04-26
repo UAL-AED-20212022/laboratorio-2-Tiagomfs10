@@ -7,12 +7,12 @@ def inserir_fim_lista(lista_ligada, elemento):
     lista_ligada.insert_at_end(elemento)
     return lista_ligada
 
-def registar_depois_elemento(lista_ligada, elemento1, elemento2):
-    lista_ligada.insert_after_item(elemento1, elemento2)
+def registar_depois_elemento(lista_ligada, elemento1, registado):
+    lista_ligada.insert_after_item(elemento1, registado)
     return lista_ligada
 
-def registar_antes_elemento(lista_ligada, elemento1, elemento2):
-    lista_ligada.insert_before_item(elemento1, elemento2)
+def registar_antes_elemento(lista_ligada, elemento1, registado):
+    lista_ligada.insert_before_item(elemento1, registado)
     return lista_ligada
 
 def registar_pais_indice(lista_ligada, elemento2, elemento1):

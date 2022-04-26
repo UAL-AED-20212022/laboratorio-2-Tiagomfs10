@@ -18,11 +18,11 @@ def sistema_paises():
                 lista_ligada.traverse_list()
 
         if input_user[0] == "RPDE":
-            if controller.registar_depois_elemento(lista_ligada, input_user[1], input_user[2]):
+            if controller.registar_depois_elemento(lista_ligada, input_user[2], input_user[1]):
                 lista_ligada.traverse_list()
             
         if input_user[0] == "RPAE":
-            if controller.registar_antes_elemento(lista_ligada, input_user[1], input_user[2]):
+            if controller.registar_antes_elemento(lista_ligada, input_user[2], input_user[1]):
                 lista_ligada.traverse_list()
 
             
@@ -32,7 +32,7 @@ def sistema_paises():
 
         if input_user[0] == "VNE":
             if controller.verificar_numero_paises(lista_ligada):
-                print(f"O número de elementos é {lista_ligada.get_count()}.")
+                print(f"O número de elementos são {lista_ligada.get_count()}.")
 
             
         if input_user[0] == "VP":
@@ -52,8 +52,7 @@ def sistema_paises():
                 print(f"O país {ultimo_pais} foi eliminado da lista.")
             
         if input_user[0] == "EP":
-            if controller.verificar_pais(lista_ligada, input_user[1]):
-                controller.eliminar_pais(lista_ligada, input_user[1])
+            if controller.eliminar_pais(lista_ligada, input_user[1]):
                 
                 print(f"O país {input_user[1]} foi eliminado da lista.")
             else:
