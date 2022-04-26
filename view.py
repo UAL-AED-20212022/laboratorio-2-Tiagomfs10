@@ -3,7 +3,11 @@ from models.LinkedList import LinkedList
 def sistema_paises():
     lista_ligada = LinkedList()
     while True:
-        input_user = input().split(" ")
+        try:
+
+            input_user = input().split(" ")
+        except EOFError:
+            return
 
         if input_user[0] == "RPI":
             if controller.inserir_inicio_lista(lista_ligada, input_user[1]):
@@ -28,14 +32,14 @@ def sistema_paises():
 
         if input_user[0] == "VNE":
             if controller.verificar_numero_paises(lista_ligada):
-                print(f"O numero de países é {lista_ligada.get_count()}.")
+                print(f"O número de elementos é {lista_ligada.get_count()}.")
 
             
         if input_user[0] == "VP":
             if controller.verificar_pais(lista_ligada, input_user[1]):
                 print(f"O país {input_user[1]} encontra-se na lista.")
             else:
-                print(f"O pais {input_user[1]} não se encontra na lista.")
+                print(f"O país {input_user[1]} não se encontra na lista.")
             
         if input_user[0] == "EPE":
             primeiro_pais = lista_ligada.start_node.item
@@ -51,7 +55,6 @@ def sistema_paises():
             if controller.verificar_pais(lista_ligada, input_user[1]):
                 controller.eliminar_pais(lista_ligada, input_user[1])
                 
-                lista_ligada.traverse_list()
                 print(f"O país {input_user[1]} foi eliminado da lista.")
             else:
                 print(f"O país {input_user[1]} não se encontra na lista.")
