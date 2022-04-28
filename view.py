@@ -52,7 +52,8 @@ def sistema_paises():
                 print(f"O país {ultimo_pais} foi eliminado da lista.")
             
         if input_user[0] == "EP":
-            if controller.eliminar_pais(lista_ligada, input_user[1]):
+            if controller.verificar_pais(lista_ligada, input_user[1]):
+                controller.eliminar_pais(lista_ligada, input_user[1])
                 
                 print(f"O país {input_user[1]} foi eliminado da lista.")
             else:
